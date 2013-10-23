@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{$lang.home}{if $ur_here} - {$ur_here} {/if}</title>
+<link href="templates/public.css" rel="stylesheet" type="text/css">
+{include file="javascript.htm"}
+</head>
+<body>
+<div id="dcWrap">
+ {include file="header.htm"}
+ <div id="dcLeft">{include file="menu.htm"}</div>
+ <div id="dcMain">
+   {include file="ur_here.htm"}
+   <div id="mainBox">
+    <h3>{$ur_here}</h3>
+    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+    <tr>
+       <th>{$lang.ad_add}</th>
+       <th>{$lang.ad_list}</th>
+     </tr>
+     <tr>
+      <td width="350" valign="top">
+       <form action="ad.php?rec=insert" method="post" enctype="multipart/form-data">
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableOnebor">
+         <tr>
+          <td>{$lang.ad_name}<br>
+<input type="text" name="ad_name" value="" size="20" class="inpMain" />
+          </td>
+         </tr>
+         <tr>
+          <td>{$lang.ad_img}<br>
+           <input type="file" name="ad_img" class="inpFlie" />
+          </td>
+         </tr>
+         <tr>
+          <td>{$lang.ad_link}
+           <br>
+           <input type="text" name="ad_link" value="" size="40" class="inpMain" />
+          </td>
+         </tr>
+         <tr>
+          <td>{$lang.sort}<br>
+<input type="text" name="sort" value="50" size="20" class="inpMain" />
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <input name="submit" class="btn" type="submit" value="{$lang.btn_submit}" />
+          </td>
+         </tr>
+        </table>
+       </form>
+      </td>
+      <td valign="top">
+       <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableOnebor">
+        <tr>
+         <td width="100">{$lang.ad_name}</td>
+         <td></td>
+         <td width="50" align="center">{$lang.sort}</td>
+         <td width="80" align="center">{$lang.handler}</td>
+        </tr>
+        <!-- {foreach from=$ad_list item=ad_list} -->
+        <!-- {if $ad_list.id eq $id} -->
+        <form action="ad.php?rec=update" method="post" enctype="multipart/form-data">
+         <tr>
+          <td height="30" colspan="4"><strong>{$lang.ad_edit}</strong></td>
+         </tr>
+         <tr>
+          <td colspan="4">
+           <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tableNobor">
+            <tr>
+             <td>{$lang.ad_name}:
+           <input type="text" name="ad_name" value="{$ad_list.ad_name}" size="20" class="inpMain" /></td>
+             <td align="right">{$lang.sort}:
+     <input type="text" name="sort" value="{$ad_list.sort}" size="20" class="inpMain" /></td>
+            </tr>
+           </table>
+           
+          </td>
+         </tr>
+         <tr>
+          <td colspan="4">{$lang.ad_img}:
+           <input type="file" name="ad_img" />
+           {if $ad_list.ad_img}<a href="../{$ad_list.ad_img}" target="_blank"><img src="images/yes.gif"></a>{else}<img src="images/no.gif">{/if}</td>
+         </tr>
+         <tr>
+          <td colspan="4">{$lang.ad_link}:
+           <input type="text" name="ad_link" value="{$ad_list.ad_link}" size="55" class="inpMain" />
+          </td>
+         </tr>
+         <input type="hidden" name="id" value="{$ad_list.id}">
+         <tr>
+          <td height="40" colspan="4">
+           <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tableNobor">
+            <tr>
+             <td><a href="ad.php" class="btnGray">{$lang.cancel}</a></td>
+             <td align="right">
+               <input type="hidden" name="ad_img" value="{$ad_list.ad_img}">
+               <input name="submit" class="btn" type="submit" value="{$lang.btn_submit}" />
+             </td>
+            </tr>
+           </table>
+          </td>
+         </tr>
+        </form>
+        <!-- {else} -->
+        <tr>
+         <td><a href="../{$ad_list.ad_img}" target="_blank"><img src="{$ad_list.thumb}" width="100" /></a></td>
+         <td>{$ad_list.ad_name}</td>
+         <td align="center">{$ad_list.sort}</td>
+         <td align="center"><a href="ad.php?rec=edit&id={$ad_list.id}">{$lang.edit}</a> | <a href="ad.php?rec=del&id={$ad_list.id}">{$lang.del}</a></td>
+        </tr>
+        <!-- {/if} -->
+        <!-- {/foreach} -->
+       </table>
+      </td>
+     </tr>
+    </table>
+   </div>
+ </div>
+ {include file="footer.htm"}
+ </div>
+</body>
+</html>
