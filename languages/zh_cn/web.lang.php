@@ -60,4 +60,21 @@ $_LANG['pager_last'] = '最末页';
 $_LANG['pager_previous'] = '上一页';
 $_LANG['pager_next'] = '下一页';
 
+/*作品案例*/
+$_LANG['works']='作品案例';
+/*在建工厂*/
+$_LANG['buildings']='在建工厂';
+/*精英团队*/
+$_LANG['best_team']='精英团队';
+/*问题咨询*/
+$_LANG['ask_question']='问题咨询';
+/*企业详情*/
+$_LANG['company_detail']='企业详情';
+/*业主评论*/
+$_LANG['owner_comments']='业主评论';
+/*免费预约*/
+$_LANG['free_order']='免费预约';
+/*免费量房*/
+$_LANG['free_measure']='免费量房';
+
 ?>
