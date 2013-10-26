@@ -17,6 +17,7 @@
 
 DROP DATABASE IF EXISTS hzszzs;
 CREATE DATABASE hzszzs; 
+use hzszzs;
 --
 -- Table structure for table `hzsad`
 --
