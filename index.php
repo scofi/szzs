@@ -22,8 +22,13 @@ $about = $dou->fetch_array($query);
 $index['about_name'] = $about['page_name'];
 $index['about_content'] = $dou->dou_substr($about['content'], 300);
 $index['about_link'] = $dou->rewrite_url('page', '1');
-$index['product_link'] = $dou->rewrite_url('product_category');
+$index['works_link'] = $dou->rewrite_url('product_category','1');
+$index['buildings_link'] = $dou->rewrite_url('product_category','2');
+$index['bestteam_link'] = $dou->rewrite_url('product_category','4');
 $index['article_link'] = $dou->rewrite_url('article_category');
+$index['free_measure_link'] = $dou->rewrite_url('article_category',4);
+$index['owner_comments_link'] = $dou->rewrite_url('article_category',5);
+$index['ask_question_link'] = $dou->rewrite_url('article_category',3);
 
 /* 获取meta和title信息 */
 $smarty->assign('page_title', $_CFG['site_title']);
@@ -40,8 +45,13 @@ $smarty->assign('index', 'index'); // 是否为首页的标志
 $smarty->assign('index_ad', get_ad_list());
 $smarty->assign('link', get_link_list());
 $smarty->assign('index', $index);
-$smarty->assign('recommend_product', $dou->get_recommend_product('', $_CFG['home_display_product']));
-$smarty->assign('recommend_article', $dou->get_recommend_article('', $_CFG['home_display_article']));
+$smarty->assign('recommend_works', $dou->get_recommend_product(1, $_CFG['home_display_product']));
+$smarty->assign('recommend_bestteam', $dou->get_recommend_product(4, $_CFG['home_display_product']));
+$smarty->assign('recommend_buildings',   $dou->get_recommend_product(2, $_CFG['home_display_product']));
+$smarty->assign('recommend_article', $dou->get_recommend_article(1, $_CFG['home_display_article']));
+$smarty->assign('recommend_ask_question', $dou->get_recommend_article(3, $_CFG['home_display_article']));
+$smarty->assign('recommend_owner_comments', $dou->get_recommend_article(5, $_CFG['home_display_article']));
+$smarty->assign('recommend_free_measure', $dou->get_recommend_article(4, $_CFG['home_display_article']));
 
 $smarty->display('index.dwt');
 
