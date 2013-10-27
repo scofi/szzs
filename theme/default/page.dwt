@@ -12,14 +12,21 @@
 <body>
 <div id="wrapper">
  {include file="inc/header.tpl"}
+
  <div class="wrap mb">
+  <div>
+	
+     {include file="inc/ur_here.tpl"}
+    
+</div>
    <div id="pageLeft">
     {include file="inc/page_tree.tpl"}
    </div>
    <div id="pageIn">
-     {include file="inc/ur_here.tpl"}
      <div id="page">
+       <div class="title">
        <h1>{$page.page_name}</h1>
+       </div>
        <div class="content">
         {$page.content}
        </div>

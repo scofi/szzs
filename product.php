@@ -83,7 +83,12 @@ $smarty->assign('description', $product['description']);
 $smarty->assign('nav_top_list', $dou->get_nav('0', 'product_category', '', 'top'));
 $smarty->assign('nav_list', $dou->get_nav('0', 'product_category', $cat_id));
 $smarty->assign('nav_bottom_list', $dou->get_nav('0', 'product_category', '', 'bottom'));
+
 $ur_here = $dou->ur_here('product_category', $cat_id, $product['product_name']);
+$matches  = preg_split("/<b>><\/b>/", $ur_here);
+if(count($matches)>=2){
+	$ur_here = join("<b>></b>", array_slice($matches,1));
+}
 
 /* 初始化数据 */
 $smarty->assign('ur_here', $ur_here);

@@ -13,11 +13,15 @@
 <div id="wrapper">
  {include file="inc/header.tpl"}
  <div class="wrap mb">
+   <div>
+	
+     {include file="inc/ur_here.tpl"}
+    
+	</div>
   <div id="pageLeft">
-    {include file="inc/product_tree.tpl"}
+        {include file="inc/page_tree.tpl"}
   </div>
   <div id="pageIn">
-   {include file="inc/ur_here.tpl"}
    <div class="productList">
     <!-- {foreach from=$product_list name=product_list item=product} -->
     <dl<!-- {if $smarty.foreach.product_list.last} --> class="last"<!-- {/if} -->>

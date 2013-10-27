@@ -19,7 +19,7 @@ class Upload
 	var $images_dir = "../upload/"; //文件上传路径 结尾加斜杠
 	var $thumb_dir = "small/"; //缩略图路径（必须在$images_dir下建立） 结尾加斜杠
 	var $upfile_type = "jpg,gif,png"; //上传的类型，默认为：jpg gif png rar zip
-	var $upfile_size_max = '1024'; //上传大小限制，单位是“KB”，默认为：1024KB
+	var $upfile_size_max = '8024'; //上传大小限制，单位是“KB”，默认为：1024KB
 
 	/**
 	 +----------------------------------------------------------

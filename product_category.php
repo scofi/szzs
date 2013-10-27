@@ -97,8 +97,17 @@ $smarty->assign('nav_top_list', $dou->get_nav('0', 'product_category', '', 'top'
 $smarty->assign('nav_list', $dou->get_nav('0', 'product_category', $cat_id));
 $smarty->assign('nav_bottom_list', $dou->get_nav('0', 'product_category', '', 'bottom'));
 
+
+/*
+ * 如果面包屑导航栏有三级的话，去除中间一级
+ */
+$url_here = $dou->ur_here('product_category', $cat_id);
+$matches  = preg_split("/<b>><\/b>/", $url_here);
+if(count($matches)>=2){
+	$url_here = join("<b>></b>", array_slice($matches,1));
+}
 /* 初始化数据 */
-$smarty->assign('ur_here', $dou->ur_here('product_category', $cat_id));
+$smarty->assign('ur_here', $url_here);
 $smarty->assign('product_category', $dou->get_product_category($cat_id));
 $smarty->assign('product_list', $product_list);
 

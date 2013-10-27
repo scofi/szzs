@@ -10,7 +10,7 @@ body {
 	font-family:\5b8b\4f53, Arial, Lucida, Verdana, Helvetica, sans-serif;
 	font-size:12px;
 	color:#555;
-	background-color:#F4F4F4;
+	background: none repeat scroll 0% 0% rgb(236, 236, 236);
 	line-height:130%;
 	margin:0;
 	padding:0;
@@ -109,8 +109,25 @@ input, img, select {
 }
 #pageIn {
 	float:left;
-	width:780px;
+	width:770px;
 	overflow:hidden;
+	border: 1px solid rgb(205, 205, 205);
+    background: none repeat scroll 0% 0% rgb(255, 255, 255);
+    margin-bottom:10px;
+}
+
+#pageLeft_2 {
+	float:left;
+	width:width: 274px;;
+	margin-right:20px;
+}
+#pageIn_2 {
+	float:left;
+	width:650px;
+	overflow:hidden;
+	border: 1px solid rgb(205, 205, 205);
+    background: none repeat scroll 0% 0% rgb(255, 255, 255);
+    margin-bottom:10px;
 }
 /* 头部导航
 ----------------------------------------------- */
@@ -326,10 +343,11 @@ input, img, select {
 	border-bottom:1px solid #CBD1D3;
 }
 .treeBox li {
-	border-left:4px solid #F4F4F4;
+	
 	line-height:15px;
 	margin-top:15px;
-	padding-left:10px;
+	padding-left:0px;
+	padding-right:10px;
 }
 .treeBox li.cur {
 	border-left:4px solid #19B4EA;
@@ -341,10 +359,9 @@ input, img, select {
 ----------------------------------------------- */
 /* -- urHere -- */
 .urHere {
-	height:35px;
-	line-height:35px;
-	color:#999999;
-	border-bottom:1px solid #CBD1D3;
+    padding: 0px 10px;
+    height: 31px;
+
 }
 .urHere a {
 	color:#999999;
@@ -608,6 +625,7 @@ input, img, select {
 	color:#333333;
 	font-size:18px;
 	font-weight:bold;
+	padding-bottom:20px;
 }
 #page .info {
 	padding:2px 0 20px 0;
@@ -617,8 +635,14 @@ input, img, select {
 #page .content {
 	color:#666666;
 	line-height:200%;
-	padding-top:10px;
+	padding:10px;
 }
+
+#page  .title{
+	text-align:center;
+	border-bottom:1px dotted rgb(205, 205, 205);
+}
+
 /* product_category
 ----------------------------------------------- */
 .productList {
@@ -773,6 +797,7 @@ input, img, select {
 	color:#333333;
 	font-size:18px;
 	font-weight:bold;
+	
 }
 #article .info {
 	padding:2px 0 20px 0;
@@ -782,6 +807,64 @@ input, img, select {
 #article .content {
 	color:#666666;
 	line-height:180%;
+
+}
+/* page_tree 样式
+-----------------------------------------------
+*/
+.bm {
+    border: 1px solid rgb(205, 205, 205);
+    background: none repeat scroll 0% 0% rgb(255, 255, 255);
+    margin-bottom:10px;
+}
+.bm h2{
+	padding-top:5px;
+}
+.bm_h {
+    padding: 0px 10px;
+    height: 31px;
+    border-top: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(194, 213, 227);
+    background: none repeat scroll 0% 0% rgb(242, 242, 242);
+}
+.bm_c {
+    padding: 10px;
+    height:100px;
+}
+.bm_c_2 {
+    padding: 10px;
+    height:200px;
+}
+
+.bm_c_2 .qq{
+	width:190px;margin:10px auto;
+}
+.bm_c_2 .qq p{
+	font-size:12px;color:#666666;height:30px;line-height:30px;
+}
+.bm_c_2 .qq p a{
+	margin-right: 5px;
+}
+.bm_c_2 .qq p a img{
+	vertical-align: 0px;" border="0;
+}
+.bm_c .left{
+    float:left;
+}
+.bm_c .right{
+    float:right;
+}
+.bm_c_2 .add{
+	width:170px;margin:10px auto; 
+}
+.bm_c_2 .add .phone{
+	font-size:12px;
+	color:#666666;
+	line-height:16px;
+	margin-bottom:15px;
+	margin-top:15px;
+	text-indent:20px;
+	background: url(images/lianxi_bg.gif) no-repeat;
 }
 /* 閸掑棝銆�
 ----------------------------------------------- */
@@ -871,4 +954,236 @@ input, img, select {
 }
 #footer .copyRight {
 	font-family:Arial, Lucida, Verdana, Helvetica, sans-serif;
+}
+
+/* 案例详尽信息左边栏
+----------------------------------------------------*/
+#case_left{
+	float: left;
+	width: 274px;
+}
+#left_1{
+	font-size: 14px;
+	color: rgb(64, 64, 64);
+	margin-bottom: 15px;
+}
+#left_1 dl {
+    padding: 10px 0px;
+    width: 80%;
+    margin: 0px auto;
+    overflow: hidden;
+}
+#left_1 h2 {
+    height: 45px;
+    line-height: 45px;
+    padding-left: 40px;
+    font-size: 16px;
+    background: url("images/goodcase6.gif") no-repeat scroll 0% 0% transparent;
+}
+#left_1 .bg {
+    background: url("images/goodcase5.gif") repeat-y scroll 0% 0% transparent;
+}
+#left_1 .ilove_sjs {
+    background: url("images/ilove_sjs.png") no-repeat scroll 0% 0% transparent;
+    width: 250px;
+    height: 121px;
+    margin-left: 12px;
+    border-top: 1px solid rgb(199, 199, 199);
+}
+#left_1 .ilove_sjs dt img {
+    width: 86px;
+    height: 86px;
+}
+#left_1 .ilove_sjs dd div {
+    width: 120px;
+    overflow: hidden;
+    height: 30px;
+    display: block;
+}
+#left_1 dl {
+    padding: 10px 0px;
+    width: 80%;
+    margin: 0px auto;
+    overflow: hidden;
+}
+#left_1 .ilove_sjs dt {
+    float: left;
+    padding: 0px 15px;
+}
+#left_1 dl dt a {
+    border: 1px solid rgb(214, 214, 214);
+    padding: 1px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+#left_1 .ilove_sjs .ilove_sub {
+    background: url("images/ilove_zx.png") no-repeat scroll left top transparent;
+    width: 108px;
+    height: 28px;
+    display: block;
+}
+#left_1 .ilove_sjs .ilove_sub:hover {
+    background: url("images/ilove_zx.png") no-repeat scroll left -29px transparent;
+    width: 108px;
+    height: 28px;
+    display: block;
+}
+#left_1 .shouchang {
+    font-size: 12px;
+    color: rgb(181, 0, 0);
+    float: left;
+    line-height: 18px;
+}
+#left_1 #ckepop {
+    height: 25px;
+    width: 220px;
+    margin: 0px auto;
+}
+#left_1 .b_bg {
+    font-size: 0px;
+    height: 18px;
+    background: url("images/goodcase6.gif") no-repeat scroll 0px -55px transparent;
+}
+#case_left .free_phone_zx {
+    display: block;
+    width: 274px;
+    height: 60px;
+    margin-bottom: 16px;
+    background: url("images/goodcase6.gif") no-repeat scroll 0px -152px transparent;
+}
+#case_left .free_phone_zx:hover {
+    background-position: 0px -213px;
+}
+
+/* 案例详尽信息正文栏
+----------------------------------------------------*/
+#case_right {
+    float: right;
+    width: 650px;
+}
+.goodcase_bshow {
+    border: 1px solid rgb(227, 227, 227);
+    width: 648px;
+    position: relative;
+    text-align: center;
+}
+.goodcase_c_iorder {
+    height: 40px;
+    line-height: 40px;
+    background: url("images/goodcase2.gif") repeat-x scroll 0px -85px transparent;
+    font-size: 12px;
+    overflow: hidden;
+}
+.goodcase_c_iorder .zonetype_wrap {
+    width: 600px;
+    overflow: hidden;
+    height: 40px;
+}
+.goodcase_c_iorder ul {
+    white-space: nowrap;
+    height: 40px;
+    background: url("images/goodcase2.gif") repeat-x scroll 0px -126px transparent;
+    border-right: 1px solid rgb(227, 227, 227);
+}
+.goodcase_c_iorder ul, .goodcase_c_iorder .zonetype_wrap, .goodcase_c_iorder .arrow {
+    float: left;
+}
+.goodcase_c_iorder ul li.first {
+    padding-left: 0px;
+    background: none repeat scroll 0px center transparent;
+}
+.goodcase_c_iorder ul li {
+    float: left;
+    padding-left: 2px;
+    background: url("images/goodcase2.gif") no-repeat scroll 0px -215px transparent;
+}
+.goodcase_c_iorder ul li a {
+    display: inline-block;
+    width: 82px;
+    text-align: center;
+    color: rgb(64, 64, 64);
+}
+.tuku_title {
+    text-align: center;
+    font-size: 16px;
+    font-family: '΢���ź�';
+    color: rgb(13, 13, 13);
+    font-weight: bold;
+    padding-top: 15px;
+}
+#bpic {
+    width: 630px;
+    overflow: hidden;
+    padding: 20px 5px 20px 0px;
+    position: relative;
+    text-align: center;
+}
+.goodcase_c_spic {
+    border-top: 1px solid rgb(227, 227, 227);
+    height: 117px;
+    padding: 0px 15px;
+    background: url("images/goodcase2.gif") repeat-x scroll 0px -256px transparent;
+}
+.goodcase_c_spic .arraw_l {
+    background-position: -205px -76px;
+    margin-left: 10px;
+}
+.goodcase_c_spic .arraw {
+    float: left;
+    width: 50px;
+    height: 117px;
+    background: url("images/bg_goodcase1.gif") no-repeat scroll 0% 0% transparent;
+    display: inline;
+}
+.goodcase_c_spic .arraw_l .none {
+    background-position: -73px -160px;
+    cursor: default;
+}
+.goodcase_c_spic .arraw_l a {
+    background-position: 0px -160px;
+}
+.goodcase_c_spic .arraw a {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    margin: 43px 0px 0px 9px;
+    background: url("images/bg_goodcase1.gif") no-repeat scroll 0% 0% transparent;
+}
+.goodcase_c_spic .scroll_box_wrap {
+    width: 500px;
+    height: 99px;
+    padding-top: 18px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    background: url("images/goodcase2.gif") repeat-x scroll 0px -376px transparent;
+}
+.goodcase_c_spic li {
+    float: left;
+    margin-right: 10px;
+    display: inline;
+    padding: 2px;
+    width: 92px;
+    height: 74px;
+    overflow: hidden;
+    border: 1px solid rgb(204, 204, 204);
+    cursor: pointer;
+}
+.goodcase_c_spic li img {
+    width: 92px;
+    height: 74px;
+}
+.goodcase_c_spic .arraw_r .none {
+    background-position: -109px -160px;
+    cursor: default;
+}
+.goodcase_c_spic .arraw_r a {
+    background-position: -36px -160px;
+}
+#design_concept_bg {
+    margin: 3px;
+    background: none repeat scroll 0% 0% rgb(255, 255, 237);
+    border: 1px dotted rgb(227, 227, 227);
+    padding: 10px 15px;
+    width: 672px;
 }
