@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="images/jquery.min.js"></script>
+<script type="text/javascript" src="images/global.js"></script>
+</head>
+<body>
+<div id="wrapper">
+ {include file="inc/header.tpl"}
+ <div class="wrap mb">
+   <div>
+	
+     {include file="inc/ur_here.tpl"}
+    
+	</div>
+  <div id="pageLeft">
+        {include file="inc/page_tree.tpl"}
+  </div>
+  <div id="pageIn">
+   <div class="bm_h cl"><h1 class="xs2">{$buildings_title}</h1></div>
+   <div class="buildingsList">
+    <!-- {foreach from=$buildings_list name=buildings_list item=building} -->
+    <div class="designer_box2">
+    <dl>
+    <dt ><a href="{$building.url}"><img src="{$building.thumb}" alt="{$building.houses}" width="290" height="200" /></a></dt>
+    <dd>
+	     <div class="name"><a href="{$building.url}" title="{$building.houses}">{$building.houses}</a></div>
+		 <p>户型：{$building.house_structure}</p>
+		 <p >面积:{$building.house_proportion}</p>
+		 <p>设计风格:{$building.design_style}</p>
+		 <p><a href="{$building.url}">查看详情 > ></a></p>
+		
+    </dd>
+    </dl>
+    </div>
+    <!-- {/foreach} -->
+    <div class="clear"></div>
+   </div>
+   {include file="inc/pager.tpl"}
+  </div>
+  <div class="clear"></div>
+ </div>
+ {include file="inc/online_service.tpl"}
+ {include file="inc/footer.tpl"} </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="images/jquery.min.js"></script>
+<script type="text/javascript" src="images/global.js"></script>
+</head>
+<body>
+<div id="wrapper">
+ {include file="inc/header.tpl"}
+ <div class="wrap mb">
+ 	<div>
+ 		{include file="inc/ur_here.tpl"}
+ 	</div>
+   <div id="pageLeft_2">
+    {include file="inc/product_tree.tpl"}
+   </div>
+   <div id="pageIn_2">
+  
+  
+     
+		<div id="case_right">
+            
+			<div class="goodcase_bshow">
+				 <!--案例阶段选项卡 开始-->
+				<div class="goodcase_c_iorder"> 
+					<span class="nums">  <b> (<em id="cur_order" class="cur">1</em>/<em id="countnums">2</em>) </b> </span> 
+					<a href="javascript:" class="arrow prev"></a>
+					<div class="zonetype_wrap">
+					  	<ul id="zonetype_nav">
+							<li class="first"><a href="javascript:" class="" id="zoneorder_0" onclick="show_New_zonepic(this,0)" >全部图片</a></li>
+					
+						</ul>
+					</div>
+					<a href="javascript:" class="arrow next"></a>
+				</div>
+				<!--案例阶段选项卡 结束-->
+				<div class="tuku_title" style="background-color:White">
+					宿迁世纪广场售楼部 &nbsp; &nbsp;  设计效果图
+				</div>
+				<div class="goodcase_c_pic">
+ 					<p id="bpic" style="background-color:White">
+ 						<img src="http://www.conshan.com/img/%E3%80%902%E3%80%91%E5%B7%A5%E8%A3%85-%E5%94%AE%E6%A5%BC%E5%A4%A7%E5%8E%852.jpg" id="c_bpic"  alt="" title="" height="440" width="600">
+
+ 						<img src="http://nt.tobosu.com/images/tuku/imageloading.gif" class="loadimg" id="loadimg" style="display: none;"> 
+ 						<a style="display: none;" href="javascript:" onclick="scrollOnbpic('l')" class="prev" id="prev"  title="上一张"></a> 
+ 						<a style="display: block;" href="javascript:" onclick="scrollOnbpic('r')" class="next" id="next"  title="下一张"></a> 
+ 					</p>
+					 <div style="width: 670px; left: 20px;" id="ifocus_opdiv1"></div><div style="left: 28px;" id="ifocus_tx1">
+					 </div>
+					 <div class="goodcase_c_spic">
+ 						<span class="arraw arraw_l">
+ 							<a class="none" href="javascript:"  onclick="return goodcase_spic_scroll_to(this,'l')" id="prev_arraw" title="上一张"></a>
+ 						</span>
+ 						<div class="scroll_box_wrap">
+  							<ul id="goodcase_spic" style="position: absolute; left: 0px; top: 18px; width: 216px;">
+  								<li class="on" id="spicli_0"><img src="img/【2】工装-售楼大厅2.jpg" height="0" width="0"></li>
+  								<li class="" id="spicli_1"><img src="img/【1】工装-售楼大厅1.jpg" height="0" width="0"></li>
+  							</ul>
+						</div>
+						<span class="arraw arraw_r">
+							<a class="none" href="javascript:"  onclick="return goodcase_spic_scroll_to(this,'r')" id="next_arraw" title="下一张"></a>
+						</span>
+
+  					</div>
+ 					<input value="0" name="cur_zonearr_num" id="cur_zonearr_num" type="hidden">
+				</div>
+ 				<script src="js/goodcase_show.js" type="text/javascript"></script>
+ 			</div>
+ 
+            
+            <!--设计师理念 开始-->
+                
+            <div id="design_concept">
+            	<div id="design_concept_bg">
+                	<h1>  设计师理念：</h1>
+                </div>
+            </div>  
+            <!--设计师理念 结束-->
+            
+             <!--热门案例 -->
+            </div>      
+     </div>
+   </div>
+
+   <div class="clear"></div>
+ 
+ <div>
+ 	{include file="inc/online_service.tpl"}
+ 	{include file="inc/footer.tpl"} 
+ </div>
+</body>
+</html>

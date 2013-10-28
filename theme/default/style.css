@@ -827,6 +827,10 @@ input, img, select {
     border-bottom: 1px solid rgb(194, 213, 227);
     background: none repeat scroll 0% 0% rgb(242, 242, 242);
 }
+.bm_h .xs2 {
+	padding-top:4px;
+    font-size: 14px !important;
+}
 .bm_c {
     padding: 10px;
     height:100px;
@@ -1186,4 +1190,31 @@ input, img, select {
     border: 1px dotted rgb(227, 227, 227);
     padding: 10px 15px;
     width: 672px;
+}
+/**
+ *在建工地/作品案例样式
+--------------------------------------------------*/
+.buildingsList{
+	padding:10px;
+}
+.buildingsList .designer_box2 {
+    float: left;
+    display: inline;
+    margin: 10px 20px;
+    padding: 22px;
+    width: 290px;
+    height: 265px;
+    background: none repeat scroll 0% 0% rgb(243, 243, 243);
+}
+.designer_box2 p {
+	float: left;
+	width: 140px;
+	font-size: 12px;
+	padding-top:5px;
+	color: rgb(102, 102, 102);
+	line-height: 20px;
+}
+.designer_box2 .name {
+    font-weight: bold;
+    font-size: 15px;
 }

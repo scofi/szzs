@@ -9,10 +9,10 @@
 			<ul>
 				<li class='left'>• <a href="Content.aspx?lxwm=1">联系我们</a></li>
 				<li class='right'>• <a href="http://hzszzs.cn/page.php?id=6">业主评论</a></li>
-				<li class='left'>• <a href="http://hzszzs.cn/product_category.php?id=1">经典案例</a></li>
+				<li class='left'>• <a href="http://hzszzs.cn/buildings_category.php?id=1">经典案例</a></li>
 				<li class='right'>• <a href="http://hzszzs.cn/page.php?id=5">免费量房</a></li>
 				<li class='left'>• <a href="http://hzszzs.cn/page.php?id=2">设计精英</a></li>
-				<li class='right'>• <a href="http://hzszzs.cn/article_category.php">在建工地</a></li>
+				<li class='right'>• <a href="http://hzszzs.cn/buildings_category.php?id=2">在建工地</a></li>
 				
 			</ul>
 		</div>
