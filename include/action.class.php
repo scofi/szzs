@@ -246,7 +246,62 @@ class Action extends DbMysql
 
 		return $limit;
 	}
-
+	/**
+	 +----------------------------------------------------------
+	 * 我的分页：
+	 *   按指定的属性进行过滤分页
+	 * @var string $attr_name 属性名称
+	 * @var mixed  $attr_value 属性值
+	 * @var string $tab_add 在翻页的链接中表名末尾附加的字符串
+	 +----------------------------------------------------------
+	 */
+	function myPager($table, $page_size = '10', $page, $attr_name=null , $attr_value=null, $tab_add="")
+	{
+		$rewrite = intval($GLOBALS['_CFG']['rewrite']);
+	
+		if ($attr_name && $attr_value)
+		{
+			$where = " WHERE {$attr_name} = '{$attr_value}'";
+		}
+	
+		$sql = "SELECT * FROM " . $this->table($table) . $where;
+	
+		$record_count = mysql_num_rows($this->query($sql));
+	
+		$url = $this->rewrite_url($table.$tab_add, $attr_value);
+	
+		if ($rewrite)
+		{
+			$get_request = "/o";
+		}
+		else
+		{
+			$get_request = $attr_value ? "&page=" : "?page=";
+		}
+	
+		$page_count = ceil($record_count / $page_size);
+		$previous = $url . $get_request . ($page > 1 ? $page -1 : 0);
+		$next = $url . $get_request . ($page_count > $page ? $page +1 : 0);
+		$last = $url . $get_request . $page_count;
+	
+		$pager = array (
+				"record_count" => $record_count,
+				"page_size" => $page_size,
+				"page" => $page,
+				"page_count" => $page_count,
+				"previous" => $previous,
+				"next" => $next,
+				"first" => $url,
+				"last" => $last
+		);
+	
+		$start = ($page -1) * $page_size;
+		$limit = " LIMIT $start, $page_size";
+	
+		$GLOBALS['smarty']->assign('pager', $pager);
+	
+		return $limit;
+	}
 	/**
 	 +----------------------------------------------------------
 	 * 获取导航菜单
