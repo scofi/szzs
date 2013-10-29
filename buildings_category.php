@@ -18,13 +18,10 @@ require(dirname(__FILE__) . '/include/init.php');
  */
 $house_status = isset($_REQUEST['id']) ? intval($_REQUEST['id']) : 1;
 
-/* 获取指定类型的作品信息  */
-$sql = "select * from ".$dou->table("buildings")." where house_status = '$house_status'";
-$query = $dou->query($sql);
-$buildings_info = $dou->fetch_array($query);
-/* 判断作品信息是否存在 */
-if (!is_array($buildings_info))
-{
+/**
+ * 作品分类只有两种，如果既不是已建成作品，又不是在建工地，则是非法访问
+ */
+if($house_status!=1 && $house_status!=2){
 	header("Location: " . ROOT_URL . "\n");
 	exit();
 }
@@ -33,7 +30,7 @@ $page  = trim($_REQUEST['page']) ? trim($_REQUEST['page']) : 1;
 $limit = $dou->myPager('buildings', 4, $page, 'house_status', $house_status,"_category");
 $where = " WHERE house_status = '$house_status'";
 
-$sql = "SELECT * FROM " . $dou->table('buildings') . $where . "ORDER BY id DESC" . $limit;
+$sql = "SELECT * FROM " . $dou->table('buildings') . $where . "ORDER BY  sort_value desc ,add_time desc " . $limit;
 $query = $dou->query($sql);
 
 while ($row = $dou->fetch_array($query))
