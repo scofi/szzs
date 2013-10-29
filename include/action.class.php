@@ -498,7 +498,23 @@ class Action extends DbMysql
 
 		return $ur_here;
 	}
-
+	
+	/**
+	 * 我的获取当前位置的方法
+	 * @var array $params
+	 *   eg: array(
+	 *          'p_name'=>父级元素名称,
+	 *           'p_value'=>父元素值
+	 *           'p_id' =>传给父级的id值,
+	 *           'mod_name'=>子级模块名称
+	 *      );
+	 */
+	function my_ur_here($pararms)
+	{
+		$url = "<a href=".ROOT_URL.$pararms['p_name'].".php?id={$pararms['p_id']}>".$pararms['p_value']."</a>";
+        $url.= "<b>></b>{$pararms['mod_name']}";		
+		return $url;
+	}
 	/**
 	 +----------------------------------------------------------
 	 * 标题
