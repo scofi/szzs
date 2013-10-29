@@ -101,3 +101,44 @@ $(document).ready(function(e) {
         }
     })
 });
+/**
+ * 作品案例或者在建工地缩略图左移
+ */
+function thumb_img_ml(){
+	var thumb_img_array = $("#goodcase_spic li");
+	for(var i=0; i<thumb_img_array.length;i++){
+		if($("#spicli_"+i).css('display')=="block"){
+			if(i+4<thumb_img_array.length){
+				var id = i+4;
+				$("#spicli_"+id).css('display','block');
+				$("#spicli_"+i).css('display','none');
+			}
+			return;
+		}
+	}
+}
+
+/**
+ * 作品案例或者在建工地缩略图右移
+ */
+function thumb_img_mr(){
+	var thumb_img_array = $("#goodcase_spic li");
+	for(var i=thumb_img_array.length; i>=0;i--){
+		if($("#spicli_"+i).css('display')=="block"){
+			if(i-4>=0){
+				var id = i-4;
+				$("#spicli_"+id).css('display','block');
+				$("#spicli_"+i).css('display','none');
+			}
+			return;
+		}
+	}
+}
+
+/**
+ * 作品案例或者在建工地点击多略图时显示大图
+ */
+function display_thumb_big_img(obj){
+	
+	$("#c_bpic").attr('src',$("#"+obj.id).attr('real_img'));
+}
