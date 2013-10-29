@@ -1101,7 +1101,7 @@ input, img, select {
     padding-left: 2px;
     background: url("images/goodcase2.gif") no-repeat scroll 0px -215px transparent;
 }
-.goodcase_c_iorder ul li a {
+.goodcase_c_iorder ul li span {
     display: inline-block;
     width: 82px;
     text-align: center;
