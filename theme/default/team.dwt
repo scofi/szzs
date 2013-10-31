@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="images/jquery.min.js"></script>
+<script type="text/javascript" src="images/global.js"></script>
+</head>
+<body>
+<div id="wrapper">
+ 	{include file="inc/header.tpl"}
+
+
+	<div id="info" style="width:100%">
+	 
+			
+			<table id="content">
+			   <tbody>
+				   	<tr>
+					    <td id="headbox">
+						
+							<img src="{$designer.thumb}">
+						
+						</td>
+						<td style="padding-left:20px;">
+							<p style="font-weight:bold; color:#666; font-family:Verdana, Arial, Helvetica, sans-serif">姓名： {$designer.name}</p>
+							<p style="color:#666666">
+								<span style="margin-left:0">毕业院校</span>：{$designer.graduate_from}
+								<span >职位</span>：{$designer.position}
+								<span>从业时间</span>：{$designer.position}
+								<span>擅长风格</span>：{$designer.skilled_in_style}
+							</p>
+							<p style="height:130px; overflow:hidden">
+							 	<span  style="margin-left:0">设计理念：</span>{$designer.design_philosophy}
+						         <a href="{$designer.detail_info_url}" style="margin-left:10px; font-weight:bolder;color:#666;">[ 查看完整档案 ]</a>
+						     </p>
+						</td>
+				   </tr>
+			   	</tbody>
+		   </table>
+	 
+			
+	</div>
+
+<!-- 作品案例-->	
+	<div class="bm_c">
+	
+		<div class="bm_h cl" style="margin:-10px auto;width:940px; text-align:right;">
+			<h2 style="font-size:15px">设计作品</h2>
+      		<a href="ImgTitle.aspx?type=2">  更多</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      	</div>
+		<!-- 中部内容开始 -->
+		<div style="margin:20px auto;width:940px;">
+			<!--成功案例开始 -->
+				<div style=" background-color:#000000; float:left;display:inline;margin-right:15px; margin-bottom:20px;width:220px;">
+				</div>
+			<!--成功案例开始 结束-->
+		</div>
+	
+	</div>
+<!-- 作品案例结束-->	
+	 	{include file="inc/online_service.tpl"}
+	 	{include file="inc/footer.tpl"} 
+</div>
+
+</body>
+</html>
