@@ -1218,3 +1218,73 @@ input, img, select {
     font-weight: bold;
     font-size: 15px;
 }
+/** 精英团队列表样式
+ -------------------------------------------------------------*/
+ .teamList{
+ 	padding-top:20px;
+	color:#999999;
+ }
+ .designer_box {
+    float: left;
+    display: inline;
+    margin: 10px 20px;
+    padding: 10px;
+    width: 305px;
+    height: 100px;
+    background: none repeat scroll 0% 0% rgb(243, 243, 243);
+}
+.designer_box img {
+    float: left;
+    margin-right: 10px;
+}
+.designer_box p {
+    float: right;
+    width: 180px;
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    line-height: 20px;
+}
+
+.designer_box .name {
+    font-weight: bold;
+    font-size: 14px;
+}
+/** 设计师信息--带作品和在建工程页面
+ --------------------------------------------------------------*/
+#info {
+    height: 230px;
+    background: url("images/bg.png") repeat scroll 0% 0% transparent;
+  
+}
+#info #content {
+    width: 940px;
+    margin: 0px auto;
+    height: 230px;
+    font-size: 14px;
+    color: rgb(153, 153, 153);
+}
+#info td {
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+}	
+#headbox img {
+    height: 180px;
+    width:180px;
+}
+#info #content p {
+    line-height: 26px;
+}
+#headbox {
+    width: 180px;
+    height: 180px;
+    vertical-align: middle;
+    text-align: center;
+}
+#info #content span {
+    font-weight: bold;
+    color: rgb(102, 102, 102);
+    margin-left: 20px;
+}
