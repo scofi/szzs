@@ -81,7 +81,7 @@
                 
             <div id="design_concept">
             	<div id="design_concept_bg">
-                	<h1>  设计师理念：</h1>
+                	<h1>  设计师理念：{$designer.design_philosophy}</h1>
                 </div>
             </div>  
             <!--设计师理念 结束-->
